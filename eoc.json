@@ -1,0 +1,150 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "Стартис",
+    "eoc_type": "EVENT",
+    "required_event": "game_start",
+	"condition": { "compare_num": [ { "global_val": "var", "var_name": "стартии" }, "=", { "const": 0 } ] },
+    "effect": [
+	{ "arithmetic": [ { "global_val": "var", "var_name": "Победы" }, "=", { "const": 0 } ] },
+	{ "arithmetic": [ { "global_val": "var", "var_name": "Сложность" }, "=", { "const": 0 } ] },
+	{ "arithmetic": [ { "global_val": "var", "var_name": "стартии" }, "=", { "const": 1 } ] }
+	
+	] 
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Стенд",
+    "effect": [
+      
+        { "open_dialogue": { "topic": "Стенд" } }
+      
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "тессссссим",
+    "effect": [
+      
+        "player_weapon_drop"
+      
+    ]
+  },
+    
+  
+  {
+    "type": "effect_on_condition",
+    "global": true,
+    "id": "Выдача_миссий_инепт_бои_один_на_один",
+    "effect": [
+      
+      { "run_eocs": "ТП_арена" },
+        {"weighted_list_eocs": [
+          [ "Бои_один_на_один", { "const": 45 } ],
+          [ "Бои_один_на_один1", { "const": 10 } ],
+          [ "Бои_один_на_один2", { "const": 20 } ],
+          [ "Бои_один_на_один3", { "const": 15 } ],
+          [ "Бои_один_на_один4", { "const": 5 } ]
+        ]
+      }
+    ]
+  },
+    
+  {
+    "type": "effect_on_condition",
+    "id": "Бои_один_на_один",
+    "effect": [ { "assign_mission": "Бои_один_на_один" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Бои_один_на_один1",
+    "effect": [ { "assign_mission": "Бои_один_на_один1" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Бои_один_на_один2",
+    "effect": [ { "assign_mission": "Бои_один_на_один2" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Бои_один_на_один3",
+    "effect": [ { "assign_mission": "Бои_один_на_один3" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Бои_один_на_один4",
+    "effect": [ { "assign_mission": "Бои_один_на_один4" } ]
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "Выдача_миссий_инепт_кулачный_бой",
+    "//": "Будет ложить эффект выпадения вещей и телепортировать",
+    "effect": [
+      { "run_eocs": "ТП_арена" },
+      {
+        "weighted_list_eocs": [
+          [ "Кулачный", { "const": 40 } ],
+          [ "Кулачный1", { "const": 10 } ],
+          [ "Кулачный2", { "const": 20 } ],
+          [ "Кулачный3", { "const": 15 } ],
+          [ "Кулачный4", { "const": 10 } ]
+        ]
+      }
+    ]
+  },
+    
+  {
+    "type": "effect_on_condition",
+    "id": "Кулачный",
+    "effect": [ { "assign_mission": "Кулачный" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Кулачный1",
+    "effect": [ { "assign_mission": "Кулачный1" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Кулачный2",
+    "effect": [ { "assign_mission": "Кулачный2" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Кулачный3",
+    "effect": [ { "assign_mission": "Кулачный3" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Кулачный4",
+    "effect": [ { "assign_mission": "Кулачный4" } ]
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "ТП_арена",
+    "effect": [
+      {
+        "u_location_variable": { "global_val": "new_map" },
+        "target_params": { "om_terrain": "Arena", "z": -1, "cant_see": true, "search_range": 1 },
+        "zone": "ZONE_ARENA_POINT",
+        "target_max_radius": 30
+      },
+      { "u_add_effect": "downed", "duration": 1 },
+      { "u_teleport": { "global_val": "new_map" }, "force": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "ТП_дом",
+    "effect": [
+      {
+        "u_location_variable": { "global_val": "Arena_start" },
+        "target_params": { "om_terrain": "Arena_start", "z": -2, "cant_see": true, "search_range": 1 },
+        "zone": "ZONE_START_POINT",
+        "target_max_radius": 30
+      },
+      { "u_teleport": { "global_val": "Arena_start" }, "force": true }
+    ]
+  }
+]

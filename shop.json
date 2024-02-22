@@ -1,0 +1,80 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "Покупка_еда",
+    "effect": [
+      
+      
+    ]
+  },
+  {
+    "id": "Еда",
+    "type": "talk_topic",
+    "dynamic_line": "Содержит Протеиновый коктель х6, Протеиновый батончик х5",
+    "responses": [
+      {
+        "text": "Купить",
+        "effect": [
+          {"u_spawn_item": "protein_shake_fortified", "count": 3},
+          {"u_spawn_item": "протеин", "count": 5},
+		  {
+			  "u_consume_item": "Монета",
+			  "count": 1
+			  
+		  }
+        ],
+        "condition": { "u_has_item": "Монета"},
+        "topic": "Магазин"
+      },
+      {
+        "text": "Назад",
+        "topic": "Магазин"
+      }
+    ]
+  },
+  {
+    "id": "Еда",
+    "type": "talk_topic",
+    "dynamic_line": "Содержит самодельный бинт х6, Липкий бинт х6, Желе рагоза х7",
+    "responses": [
+      {
+        "text": "Купить",
+        "effect": [
+          {"u_spawn_item": "cattail_jelly", "count": 1},
+          {"u_spawn_item": "bandages_makeshift_boiled", "count": 6},
+          {"u_spawn_item": "adhesiv_bandages", "count": 6},
+		  {
+			  "u_consume_item": "Монета",
+			  "count": 2
+			  
+		  }
+        ],
+        "condition": { "u_has_item": "Монета"},
+        "topic": "Магазин"
+      },
+      {
+        "text": "Назад",
+        "topic": "Магазин"
+      }
+    ]
+  },
+  {
+    "id": "Магазин",
+    "type": "talk_topic",
+    "dynamic_line": "Выбор набора",
+    "responses": [
+      {
+        "text": "Еда - Стоимость одна монета",
+        "topic": "Еда"
+      },
+      {
+        "text": "Медикаменты - Стоимость одна монета",
+        "topic": "Медикаменты"
+      },
+      {
+        "text": "Отойти",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

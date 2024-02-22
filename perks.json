@@ -1,0 +1,77 @@
+[
+  {
+    "type": "mutation_type",
+    "id": "Arena"
+  },
+  {
+    "type": "mutation",
+    "id": "Талант",
+    "name": { "str": "Нечто" },
+    "points": 0,
+    "description": "Может быть оно когда-то прорастет.",
+    "category": [ "Arena" ],
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "Никто",
+    "name": { "str": "Никто" },
+    "points": 0,
+    "description": "Ты никто.",
+    "category": [ "Arena" ],
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "Проктор",
+    "name": { "str": "Проктор" },
+    "points": 0,
+    "description": "Вы были доверенным лицом короля",
+    "category": [ "Arena" ],
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "Рыцарь",
+    "name": { "str": "Рыцарь" },
+    "points": 0,
+    "description": "Вы были рыцарем на службе у лорда Кренделя, во время турнира.",
+    "category": [ "Arena" ],
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "На_арене",
+    "name": { "str": "ты не видишь меня" },
+    "points": 0,
+    "description": "Я же сказал, что ты не видишь меня...",
+    "valid": false,
+    "player_display": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "Победил",
+    "name": { "str": "ты не видишь меня" },
+    "points": 0,
+    "description": "Я же сказал, что ты не видишь меня...",
+    "valid": false,
+    "player_display": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "Инвентарь",
+    "name": { "str": "ты не видишь меня" },
+    "points": 0,
+    "description": "Я же сказал, что ты не видишь меня...",
+    "valid": false,
+    "player_display": false,
+    "purifiable": false,
+    "integrated_armor": [ "Инвентарь" ]
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "Arena_cataclysm",
+    "name": "Arena cataclysm",
+    "authors": [ "Kenshut" ],
+    "description": "Arena cataclysm! How many battles can you last?",
+    "category": "total_conversion",
+    "version": "BETA"
+    "dependencies": [ "dda" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Инвентарь_старт",
+    "eoc_type": "EVENT",
+    "required_event": "game_start",
+    "condition": { "not": { "u_has_trait": "Инвентарь" } },
+    "effect": [
+      { "u_add_trait": "Инвентарь"}
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "Инвентарь_загрузка",
+    "eoc_type": "EVENT",
+    "required_event": "game_load",
+    "condition": { "not": { "u_has_trait": "Инвентарь" } },
+    "effect": [
+      { "u_add_trait": "Инвентарь"}
+    ]
+  },
+  {
+    "id": "Инвентарь",
+    "type": "TOOL",
+    "name": { "str": "Хранилище" },
+    "description": "В этом хранилище можно размещать особые предметы.",
+    "weight": "0 g",
+    "volume": "0 L",
+    "material": [ "stone" ],
+    "symbol": "[",
+    "looks_like": "ragpouch",
+    "color": "yellow",
+    "flags": [ "INTEGRATED", "UNBREAKABLE", "AURA", "NO_SALVAGE", "TARDIS", "ZERO_WEIGHT" ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "5000 ml",
+        "max_contains_weight": "100 kg",
+        "max_item_length": "2000 cm",
+        "item_restriction": [
+          "Монета",
+          "Осколок"
+        ],
+        "moves": 1,
+        "volume_encumber_modifier": 0
+      }
+    ]
+  }
+]

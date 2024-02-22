@@ -1,0 +1,132 @@
+[
+  {
+    "type": "overmap_special",
+    "id": "Arena",
+    "overmaps": [
+      { "point": [ 0, 0, -1 ], "overmap": "Arena" },
+	  { "point": [ 0, 0, -2 ], "overmap": "Arena_start" }
+    ],
+    "locations": [ "Пустота" ],
+    "flags": [ "Arena", "GLOBALLY_UNIQUE", "NO_ROTATE"],
+    "city_distance": [ 0, 30 ],
+    "city_sizes": [ 0, 16 ],
+    "occurrences": [ 4, 4 ]
+  },
+  {
+    "type": "terrain",
+    "id": "t_thconc_y_light",
+    "name": "concrete floor",
+	"looks_like": "t_thconc_y",
+    "description": "A bare and cold concrete floor with a streak of yellow paint, could still insulate from the outdoors but roof collapse is possible if supporting walls are broken down.",
+    "symbol": ".",
+    "color": "yellow",
+    "move_cost": 2,
+    "roof": "t_concrete_roof",
+    "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "ROAD" ],
+    "connect_groups": "CONCRETE",
+    "connects_to": "CONCRETE",
+    "bash": {
+      "sound": "SMASH!",
+      "ter_set": "t_null",
+      "str_min": 100,
+      "str_max": 400,
+      "str_min_supported": 150,
+      "items": [
+        { "item": "rock", "count": [ 5, 10 ] },
+        { "item": "scrap", "count": [ 5, 8 ] },
+        { "item": "rebar", "count": [ 0, 2 ] }
+      ]
+    },
+    "light_emitted": 120
+  },
+  {
+    "type": "mapgen",
+    "method": "json",
+	"om_terrain": [ "Arena" ],
+    "weight": 500,
+    "object": {
+	 "predecessor_mapgen": "solid_earth",
+      "rows": [
+        "xxxxxxxxxxxxxxxxxxxxxxxx",
+        "x**********************x",
+        "x***X**************X***x",
+        "x**********************x",
+        "x**********X***********x",
+        "x*****************X****x",
+        "x**X*******************x",
+        "x**********X***********x",
+        "x**********************x",
+        "x***X**************X***x",
+        "x**********************x",
+        "x**********X***********x",
+        "x**********************x",
+        "x***X**************X***x",
+        "x**********************x",
+        "x*********X************x",
+        "x**********************x",
+        "x**********************x",
+        "x**********************x",
+        "x****X**************X**x",
+        "x**********X***********x",
+        "x**********************x",
+        "x**********************x",
+        "xxxxxxxxxx&&&xxxxxxxxxxx"
+      ] ,
+	  "terrain": {"X": [ "t_thconc_y_light" ],"*": [ "t_thconc_y" ], "&": [ "t_thconc_r" ], "x": [ "t_rock_smooth" ], "z": [ "t_nether_glass_wall" ], ">": [ "t_ladder_up" ], "<": [ "t_ladder_down" ] },
+	  "furniture": {"z": [ "f_null" ] },
+	  "place_zones": [ { "type": "ZONE_ARENA_POINT", "faction": "your_followers", "x": 11, "y": 23 } ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "Арена",
+    "name": "Стенд",
+    "description": "Стенд с странными надписями.",
+    "symbol": "6",
+    "color": "light_blue",
+    "move_cost": 0,
+    "coverage": 50,
+    "roof": "t_thconc_y_light",
+    "flags": [ "NOITEM", "INDOORS" ],
+    "examine_action": { "type": "effect_on_condition", "effect_on_conditions": [ "Стенд" ] }
+  },
+    {
+    "type": "mapgen",
+    "method": "json",
+	"om_terrain": [ "Arena_start" ],
+    "weight": 500,
+    "object": {
+	 "predecessor_mapgen": "solid_earth",
+      "rows": [
+        "zzzzzzzzzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzzzzzzzzz",
+        "zzzzzzxxxxxxxxxxxxxzzzzz",
+        "zzzzzzxTTT*******>xzzzzz",
+        "zzzzzzx*C*********xzzzzz",
+        "zzzzzzx*****X*****xzzzzz",
+        "zzzzzzx*****X*****xzzzzz",
+        "zzzzzzx*****X*****xzzzzz",
+        "zzzzzzxxxxxxX*****xzzzzz",
+        "zzzzzzxB***x******xzzzzz",
+        "zzzzzzx****x******xzzzzz",
+        "zzzzzzx***********xzzzzz",
+        "zzzzzzxxxxxxxxxxxxxzzzzz",
+        "zzzzzzzzzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzzzzzzzzz",
+        "zzzzzzzzzzzzzzzzzzzzzzzz"
+      ] ,
+	  "terrain": {"X": [ "t_thconc_y_light" ],"*": [ "t_thconc_y" ],"T": [ "t_thconc_y" ],"B": [ "t_thconc_y" ],"C": [ "t_thconc_y" ], "x": [ "t_rock_smooth" ], "z": [ "t_nether_glass_wall" ], ">": [ "Арена" ], "<": [ "t_ladder_down" ] },
+	  "place_item": [{ "x": 7, "y": 10, "item": "cattail_jelly","amount": [1,1] },{ "x": 8, "y": 10, "item": "протеин","amount": [ 6,6 ] },{ "x": 8, "y": 10, "item": "protein_shake_fortified","amount": [ 6,6 ] },{ "x": 8, "y": 10, "item": "bandages_makeshift_boiled","amount": [ 6,6 ] }],
+	  "furniture": { "z": [ "f_locker" ], "T": [ "f_table" ], "B": [ "f_bed" ], "C": [ "f_chair" ] },
+	  "place_zones": [ { "type": "ZONE_START_POINT", "faction": "your_followers", "x": 9, "y": 14 } ]
+    }
+  }
+]

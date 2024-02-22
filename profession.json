@@ -1,0 +1,79 @@
+[
+  {
+    "type": "profession",
+    "id": "Никто",
+    "name": { "male": "Никто", "female": "Никто" },
+    "description": "Ты никто. У тебя ничего нет…",
+    "points": 1,
+    "traits": [ "Талант", "Никто" ],
+    "items": {
+      "both": {
+	  "items": [ "jeans", "jacket_light", "socks", "sneakers"]},
+      "male": [ "briefs" ],
+      "female": [ "bra", "boy_shorts" ]
+    
+  }
+  },
+  {
+    "type": "profession",
+    "id": "Крестьянин",
+    "name": "Крестьянин",
+    "description": "Ты был обычным крестьянином…",
+    "points": 2,
+	"traits": [ "PROF_CHURL", "ILLITERATE" ],
+    "items": {
+      "both": {
+        "items": [ "footrags", "loincloth", "cloak_wool", "ragpouch", "small_relic", "gloves_wraps", "tunic_rag" ],
+        "entries": [ { "item": "knife_baselard", "container-item": "sheath" } ]
+      },
+      "female": [ "chestwrap" ]
+    },
+    "proficiencies": [ "prof_fibers", "prof_carving", "prof_leatherworking_basic", "prof_knives_familiar" ],
+    "skills": [
+      { "level": 3, "name": "melee" },
+      { "level": 3, "name": "throw" },
+      { "level": 3, "name": "fabrication" },
+      { "level": 3, "name": "tailor" },
+      { "level": 3, "name": "survival" },
+      { "level": 3, "name": "cooking" }
+    ]
+  },
+  {
+    "type": "profession",
+    "id": "Проктор",
+    "name": "Проктор",
+    "description": "Вы были доверенным лицом короля…",
+    "points": 3,
+    "traits": [ "Проктор"],
+    "skills": [ { "level": 6, "name": "speech" }, { "level": 3, "name": "melee" } ],
+    "proficiencies": [ "prof_long_swords_familiar"],
+    "items": {
+      "both": {
+        "items": [ "pants_leather",  "footrags", "knee_high_boots",  "coat_fur", "gold_ring", "mc_chainmail_vest" ],
+        "entries": [
+          { "item": "longsword", "custom-flags": [ "auto_wield" ] }
+        ]
+      },
+      "female": [ "chestwrap"]
+    }
+  }, 
+  {
+    "type": "profession",
+    "id": "Рыцарь",
+    "name": "Рыцарь",
+    "description": "ВЫ были рыцарем на службе у лорда Кренделя, во время турнира…",
+	"//": "Лорд Крендель на английском Krendel",
+    "points": 4,
+	"skills": [ { "level": 6, "name": "melee" }, { "level": 3, "name": "unarmed" }, { "level": 3, "name": "dodge" } ],
+	"proficiencies": [ "prof_great_axes_familiar", "prof_great_axes_pro"],
+    "traits": [ "Рыцарь"],
+    "items": {
+      "both": {
+        "items": [ "aketon_pants_canvas",  "helmet_liner", "gambeson_canvas",  "boots", "mc_sabaton", "mc_helm_close", "mc_mitten_gaunt", "armor_mc_lightplate", "axe_ring"],
+        "entries": [
+          { "item": "battleaxe", "custom-flags": [ "auto_wield" ] }
+        ]
+      }
+    }
+  }
+]

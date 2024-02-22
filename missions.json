@@ -1,0 +1,225 @@
+[
+
+  
+  {
+    "id": "Бои_один_на_один",
+    "type": "mission_definition",
+    "name": { "str": "УБЕЙ ПРОТИВНИКА" },    
+    "goal": "MGOAL_KILL_MONSTER",
+    "description": "УБИТЬ ПРОТИВНИКА.",
+    "difficulty": 0,
+    "value": 0,
+    "start": {
+    "assign_mission_target": {
+    "om_terrain": "Arena",
+    "reveal_radius": 1,
+    "must_see": false,
+    "random": true,
+    "search_range": 180,
+    "z": -1},
+      "update_mapgen": {
+        "place_monster": [
+          { "monster": "mon_zombie_ks_arena", "x": 12,  "y": 12, "target": true } 
+        ]
+      }
+    },
+    "end": {
+      "effect": [
+        { "u_adjust_var": "Победы", "adjustment": 1 },
+        {
+          "arithmetic": [
+            { "global_val": "var", "var_name": "награда" },
+            "=",
+            { "const": 2 },
+            "+",
+            { "global_val": "var", "var_name": "Сложность" }
+          ]
+        },
+        {
+          "u_message": "Вы победили.",
+          "type": "mixed"
+        },
+	{ "run_eocs": "ТП_дом" },	
+        { "u_spawn_item": "Монета", "count": { "global_val": "var", "var_name": "награда", "default": 1 } }
+      ]
+    }
+  },
+  {
+    "id": "Бои_один_на_один1",
+    "type": "mission_definition",
+    "name": { "str": "УБЕЙ ПРОТИВНИКА" },
+     
+    "goal": "MGOAL_KILL_MONSTER",
+    "description": "УБИТЬ ПРОТИВНИКА.",
+    "difficulty": 0,
+    "value": 0,
+    "start": {
+    "assign_mission_target": {
+    "om_terrain": "Arena",
+    "reveal_radius": 1,
+    "must_see": false,
+    "random": true,
+    "search_range": 180,
+    "z": -1},
+      "update_mapgen": {
+        "place_monster": [
+          { "monster": "mon_zombie_cop_ks_arena", "x": 12,  "y": 12, "target": true } 
+        ]
+      }
+    },
+    "end": {
+      "effect": [
+        { "u_adjust_var": "Победы", "adjustment": 1 },
+        {
+          "arithmetic": [
+            { "global_val": "var", "var_name": "награда" },
+            "=",
+            { "const": 2 },
+            "+",
+            { "global_val": "var", "var_name": "Сложность" }
+          ]
+        },
+        {
+          "u_message": "Вы победили.",
+          "type": "mixed"
+        },
+	{ "run_eocs": "ТП_дом" },	
+        { "u_spawn_item": "Монета", "count": { "global_val": "var", "var_name": "награда", "default": 1 } }
+      ]
+    }
+  },
+  {
+    "id": "Бои_один_на_один2",
+    "type": "mission_definition",
+    "name": { "str": "УБЕЙ ПРОТИВНИКА" },
+    "goal": "MGOAL_KILL_MONSTER",
+    "description": "УБИТЬ ПРОТИВНИКА.",
+    "difficulty": 0,
+    "value": 0,
+    "start": {
+    "assign_mission_target": {
+    "om_terrain": "Arena",
+    "reveal_radius": 1,
+    "must_see": false,
+    "random": true,
+    "search_range": 180,
+    "z": -1},
+      "update_mapgen": {
+        "place_monster": [
+          { "monster": "mon_zombie_fat_ks_arena", "x": 12,  "y": 12, "target": true } 
+        ]
+      }
+    },
+    "end": {
+      "effect": [
+        { "u_adjust_var": "Победы", "adjustment": 1 },
+        {
+          "arithmetic": [
+            { "global_val": "var", "var_name": "награда" },
+            "=",
+            { "const": 2 },
+            "+",
+            { "global_val": "var", "var_name": "Сложность" }
+          ]
+        },
+        {
+          "u_message": "Вы победили.",
+          "type": "mixed"
+        },
+	{ "run_eocs": "ТП_дом" },	
+        { "u_spawn_item": "Монета", "count": { "global_val": "var", "var_name": "награда", "default": 1 } }
+      ]
+    }
+  },
+  {
+    "id": "Бои_один_на_один3",
+    "type": "mission_definition",
+    "name": { "str": "УБЕЙ ПРОТИВНИКА" },
+    "goal": "MGOAL_KILL_MONSTER",
+    "description": "УБИТЬ ПРОТИВНИКА.",
+    "difficulty": 0,
+    "value": 0,
+    "start": {
+    "assign_mission_target": {
+    "om_terrain": "Arena",
+    "reveal_radius": 1,
+    "must_see": false,
+    "random": true,
+    "search_range": 180,
+    "z": -1},
+      "update_mapgen": {
+        "place_monster": [
+          { "monster": "mon_zombie_fireman_ks_arena", "x": 12,  "y": 12, "target": true } 
+        ]
+      }
+    },
+    "end": {
+      "effect": [
+        { "u_adjust_var": "Победы", "adjustment": 1 },
+        {
+          "arithmetic": [
+            { "global_val": "var", "var_name": "награда" },
+            "=",
+            { "const": 2 },
+            "+",
+            { "global_val": "var", "var_name": "Сложность" }
+          ]
+        },
+        {
+          "u_message": "Вы победили.",
+          "type": "mixed"
+        },
+	{ "run_eocs": "ТП_дом" },	
+        { "u_spawn_item": "Монета", "count": { "global_val": "var", "var_name": "награда", "default": 1 } }
+      ]
+    }
+  },
+  {
+    "id": "Бои_один_на_один4",
+    "type": "mission_definition",
+    "name": { "str": "УБЕЙ ПРОТИВНИКА" },
+    "goal": "MGOAL_KILL_MONSTER",
+    "description": "УБИТЬ ПРОТИВНИКА.",
+    "difficulty": 0,
+    "value": 0,
+    "start": {
+    "assign_mission_target": {
+    "om_terrain": "Arena",
+    "reveal_radius": 1,
+    "must_see": false,
+    "random": true,
+    "search_range": 180,
+    "z": -1},
+      "update_mapgen": {
+        "place_monster": [
+          { "monster": "mon_zombie_swat_ks_arena", "x": 12,  "y": 12, "target": true } 
+        ]
+      }
+    },
+    "end": {
+      "effect": [
+        { "u_adjust_var": "Победы", "adjustment": 1 },
+        {
+          "arithmetic": [
+            { "global_val": "var", "var_name": "награда" },
+            "=",
+            { "const": 3 },
+            "+",
+            { "global_val": "var", "var_name": "Сложность" }
+          ]
+        },
+        {
+          "u_message": "Вы победили.",
+          "type": "mixed"
+        },
+	{ "run_eocs": "ТП_дом" },	
+        { "u_spawn_item": "Монета", "count": { "global_val": "var", "var_name": "награда", "default": 1 } }
+      ]
+    }
+  }
+  
+  
+  
+  
+  
+]

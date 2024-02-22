@@ -1,0 +1,8 @@
+[
+  {
+    "id": "ZONE_ARENA_POINT",
+    "type": "LOOT_ZONE",
+    "name": "Arena Point",
+    "description": "poin spawn on arena."
+  }
+]

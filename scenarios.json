@@ -1,0 +1,20 @@
+[
+  {
+    "type": "scenario",
+    "id": "Arena",
+    "name": "Ты гладиатор",
+    "points": 0,
+    "description": "Ты попал на арену катаклизма!",
+    "allowed_locs": [ "Arena_start" ],
+    "professions": [ "Никто", "Крестьянин", "Проктор", "Рыцарь" ],
+    "flags": [ "LONE_START" ],
+    "start_name": "Arena cataclysm",
+    "eoc": [ "Стартис" ]
+  },
+  {
+    "type": "start_location",
+    "id": "Arena_start",
+    "name": "Арена",
+    "terrain": [ "Arena_start" ]
+  }
+]

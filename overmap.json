@@ -1,0 +1,20 @@
+[
+  {
+    "type": "overmap_terrain",
+    "id": [ "Arena_start" ],
+    "name": "Барак",
+    "color": "light_red",
+    "sym": "A",
+    "see_cost": 5,
+    "flags": [ "NO_ROTATE" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [ "Arena" ],
+    "name": "Арена",
+    "sym": "A",
+    "color": "light_red",
+    "see_cost": 5,
+    "flags": [ "NO_ROTATE" ]
+  }
+]

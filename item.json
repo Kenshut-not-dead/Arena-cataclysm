@@ -1,0 +1,55 @@
+[
+  {
+    "id": "Зелье",
+    "type": "COMESTIBLE",
+    "category": "spare_parts",
+    "comestible_type": "MED",
+    "name": { "str": "<color_light_blue>Синия слизь</color>"},
+    "description": "<color_light_blue>Незначительно исцеляет повреждения.</color>",
+    "use_action": { "type": "effect_on_conditions","description": "Выпить", "effect_on_conditions": [ "EOC_lesser_give_aid" ] },
+    "volume": "1 ml",
+    "price": 10,
+    "price_postapoc": 10,
+    "material": [ "glass" ],
+    "symbol": ",",
+    "flags": ["ZERO_WEIGHT"],
+    "color": "light_gray"
+  },
+  {
+    "id": "протеин",
+    "type": "COMESTIBLE",
+    "copy-from": "protein_bar_evac",
+    "comestible_type": "FOOD",
+    "name": { "str": "Протеиновый батончик" },
+    "description": "Спресованный протеиновый батончик, удивительно отвратительный вкус."
+    
+  },
+  {
+    "id": "Монета",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": { "str": "<color_light_blue>Монета</color>"},
+    "description": "<color_light_blue>Монета с изображением лорда Кренделя.</color>",
+    "volume": "1 ml",
+    "price": 10,
+    "price_postapoc": 10,
+    "material": [ "glass" ],
+    "symbol": ",",
+    "flags": ["ZERO_WEIGHT"],
+    "color": "light_gray"
+  },
+  {
+    "id": "Осколок",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": { "str": "<color_light_blue>Осколок</color>"},
+    "description": "<color_light_blue>Странный стеклообразный осколок.</color>",
+    "volume": "1 ml",
+    "price": 10,
+    "price_postapoc": 10,
+    "material": [ "glass" ],
+    "symbol": ",",
+    "flags": ["ZERO_WEIGHT"],
+    "color": "light_gray"
+  }
+]
