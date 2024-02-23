@@ -6,7 +6,7 @@
     "authors": [ "Kenshut" ],
     "description": "Arena cataclysm! How many battles can you last?",
     "category": "total_conversion",
-    "version": "BETA"
+    "version": "BETA",
     "dependencies": [ "dda" ]
   },
   {
